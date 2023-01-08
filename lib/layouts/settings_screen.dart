@@ -8,13 +8,13 @@ class SettingsScreen extends StatefulWidget {
 }
 
 class _SettingsScreenState extends State<SettingsScreen> {
-  double isvalue = 0, isval = 0;
+  double isvalue = 25, isval = 25;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green,
+        backgroundColor: Color(0xFFFF9000),
         leading: IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back)),
         title: Text(
           'Settings',
@@ -41,10 +41,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     print(isvalue);
                   });
                 },
-                activeColor: Colors.green,
+                activeColor: Color(0xFFFF9000),
                 //inactiveColor: Colors.green,
                 max: 50,
-                min: 0,
+                min: 15,
               ),
               Text(
                 ' بِسْمِ اللَّـهِ الرَّحْمَـٰنِ الرَّحِيمِ',
@@ -69,15 +69,15 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     print(isvalue);
                   });
                 },
-                activeColor: Colors.green,
+                activeColor: Color(0xFFFF9000),
                 //inactiveColor: Colors.green,
                 max: 50,
-                min: 0,
+                min: 15,
               ),
               Text(
                 ' بِسْمِ اللَّـهِ الرَّحْمَـٰنِ الرَّحِيمِ',
                 style:
-                    TextStyle(fontSize: isvalue, fontWeight: FontWeight.bold),
+                TextStyle(fontSize: isvalue, fontWeight: FontWeight.bold),
               ),
               SizedBox(
                 height: 40,
@@ -96,7 +96,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         'Reset',
                         style: TextStyle(color: Colors.white, fontSize: 15),
                       ),
-                      fillColor: Colors.green,
+                      fillColor:Color(0xFFFF9000),
                     ),
                   ),
                   Container(
@@ -110,7 +110,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         'Save',
                         style: TextStyle(color: Colors.white, fontSize: 15),
                       ),
-                      fillColor: Colors.green,
+                      fillColor: Color(0xFFFF9000),
                     ),
                   ),
                 ],

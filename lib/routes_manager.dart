@@ -15,7 +15,7 @@ class RouteGenerator{
   static Route<dynamic>? getRoute(RouteSettings settings){
     switch(settings.name){
       case Routes.splashScreenRoute :
-        return MaterialPageRoute(builder: (_) => const SplashScreen());
+        return MaterialPageRoute(builder: (_) =>  SplashScreen());
       case Routes.homeScreenRoute :
         return MaterialPageRoute(builder: (_) => const HomeScreen());
       case Routes.surahScreenRoute :

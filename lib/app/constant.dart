@@ -2,7 +2,7 @@
 /// https://alquran.cloud/api
 Uri quranUrl = Uri.parse('uri');
 
- const  arabicName = <Map<String,dynamic>>[
+const  arabicName = <Map<String,dynamic>>[
   {
     "number": 1,
     "name": "سُورَةُ ٱلْفَاتِحَةِ",
