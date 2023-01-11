@@ -1,6 +1,6 @@
 import 'package:easy_splash_screen/easy_splash_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:quran_app/layouts/home_screen.dart';
+import 'package:quran_app/presentation/screens/home_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);

@@ -3,11 +3,17 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:quran/quran.dart' as quran;
 import 'package:quran_app/app/constant.dart';
 import 'package:quran_app/colors.dart';
+import 'package:quran_app/presentation/screens/surah_screen.dart';
 import 'package:quran_app/routes_manager.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -77,14 +83,17 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Color(0xFFFF9000),
+        backgroundColor: AppLightColors.orange,
         onPressed: () {},
         child: Icon(
           Icons.save,
         ),
       ),
       body: ListView.separated(
-        itemBuilder: (context, index) => builtHomePage(item: arabicName[index]),
+        itemBuilder: (context, index) => builtHomePage(
+            item: arabicName[index],
+        context: context
+        ),
         separatorBuilder: (context, index) => Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Container(
@@ -97,46 +106,103 @@ class HomeScreen extends StatelessWidget {
       ),
     );
   }
+
+  @override
+  void initState() {
+    super.initState();
+    FlutterNativeSplash.remove();
+  }
 }
 
-Widget builtHomePage({required Map<String, dynamic> item}) => Padding(
-  padding: const EdgeInsets.only(right: 20, left: 16),
-  child: Row(
-    children: [
-      Column(
-        children: [
-          Text(quran.getVerseEndSymbol(item['numberOfAyahs']) ,style: TextStyle(
-            fontSize: 30,
-            color: Colors.black,
-          ),),
-          Text('اياتها',style: TextStyle(
-            fontSize: 18,
-            color: Colors.black,
-          ),),
-        ],
+Widget builtHomePage({required Map<String, dynamic> item,required BuildContext context}) => GestureDetector(
+  onTap : (){
+    Navigator.of(context).push(
+      MaterialPageRoute(
+
+        builder: (context) => SurahScreen(
+          surahNumber: item['number']
       ),
-      Spacer(),
-      Column(
-        crossAxisAlignment: CrossAxisAlignment.end,
-        children: [
-          Text(
-            item['name'],
-            style: TextStyle(
-              fontSize: 22,
-              fontWeight: FontWeight.w500,
+      ),
+    );
+  },
+  child: Padding(
+    padding: const EdgeInsets.only(right: 20, left: 16),
+
+    child: Row(
+
+      children: [
+
+        Column(
+
+          children: [
+
+            Text(quran.getVerseEndSymbol(item['numberOfAyahs']) ,style: TextStyle(
+
+              fontSize: 30,
+
               color: Colors.black,
+
+            ),),
+
+            Text('اياتها',style: TextStyle(
+
+              fontSize: 18,
+
+              color: Colors.black,
+
+            ),),
+
+          ],
+
+        ),
+
+        Spacer(),
+
+        Column(
+
+          crossAxisAlignment: CrossAxisAlignment.end,
+
+          children: [
+
+            Text(
+
+              item['name'],
+
+              style: TextStyle(
+
+                fontSize: 22,
+
+                fontWeight: FontWeight.w500,
+
+                color: Colors.black,
+
+              ),
+
             ),
-          ),
-          Text(
-            item['revelationType'] =='Meccan' ? 'مكية' : 'مدنية',
-            style: TextStyle(
-              fontSize: 14,
-              color: Colors.grey,
+
+            Text(
+
+              item['revelationType'] =='Meccan' ? 'مكية' : 'مدنية',
+
+              style: TextStyle(
+
+                fontSize: 14,
+
+                color: Colors.grey,
+
+              ),
+
             ),
-          ),
-        ],
-      ),
-      SizedBox(width: 10,),
-    ],
+
+          ],
+
+        ),
+
+        SizedBox(width: 10,),
+
+      ],
+
+    ),
+
   ),
 );
