@@ -14,7 +14,7 @@ class QuranBloc extends Bloc<QuranEvent, QuranState> {
   FutureOr<void> _getSurah(
       GetSurahEvent event, Emitter<QuranState> emit) async {
     final result = await quranRemoteDataource.getSurah(event.surahNumber);
-    print(result.data?.ayahs.first.text);
+    print(result.data?.ayahs.first.text.toString());
     emit(
         QuranState(
       getSurahRequestState: RequestState.loaded,

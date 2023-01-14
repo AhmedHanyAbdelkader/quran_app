@@ -5,13 +5,16 @@ class QuranApp extends StatelessWidget {
   const QuranApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return Directionality(
+      textDirection: TextDirection.rtl,
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        onGenerateRoute: RouteGenerator.getRoute,
+        initialRoute: Routes.homeScreenRoute,
       ),
-      onGenerateRoute: RouteGenerator.getRoute,
-      initialRoute: Routes.homeScreenRoute,
     );
   }
 }

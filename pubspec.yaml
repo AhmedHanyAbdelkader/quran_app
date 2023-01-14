@@ -36,6 +36,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   dio: ^4.0.6
   easy_splash_screen: ^1.0.4
+  just_audio: ^0.9.31
+  audio_session: ^0.1.13
+  flutter_islamic_icons: ^1.0.2
   equatable: ^2.0.5
   flutter:
     sdk: flutter

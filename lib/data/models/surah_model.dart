@@ -1,9 +1,10 @@
 class Surah {
   final SurahData? data;
   const Surah({this.data});
+
   factory Surah.fromJson(Map<String, dynamic> json) =>
       Surah(
-          data: SurahData.fromJson(json['data']), 
+          data: SurahData.fromJson(json['data']),
       );
 }
 
@@ -14,6 +15,7 @@ class SurahData {
   List<Ayahs> ayahs;
   Edition edition;
   SurahData({required this.name, required this.ayahs, required this.edition});
+
   factory SurahData.fromJson(Map<String, dynamic> json) => SurahData(
       name: json['name'],
       ayahs: List<Ayahs>.from(
@@ -27,12 +29,23 @@ class SurahData {
 
 class Ayahs {
   String text;
+  String audio;
   int numberInSurah;
+  bool isClicked;
 
-  Ayahs({required this.text, required this.numberInSurah});
+  Ayahs({
+  required this.text, 
+  required this.numberInSurah,
+  required this.audio,
+  this.isClicked = false,
+  });
 
   factory Ayahs.fromJson(Map<String, dynamic> json) =>
-      Ayahs(text: json['text'], numberInSurah: json['numberInSurah']);
+      Ayahs(
+        text: json['text'], 
+        numberInSurah: json['numberInSurah'],
+        audio : json['audio'],
+        );
 }
 
 class Edition {
@@ -46,5 +59,7 @@ class Edition {
         language: json['language'],
       );
 }
+
+
 
 
