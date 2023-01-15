@@ -29,7 +29,7 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
-  flutter_native_splash: ^2.2.16
+  # flutter_native_splash: ^2.2.16
   quran:
   either_dart: ^0.3.0
   flutter_bloc: ^8.1.1
@@ -84,17 +84,17 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
 
-# flutter_native_splash-production.yaml
-flutter_native_splash:
-  color: "#ffffff"
-  image: assets/images/quraan.png
-#  branding: assets/branding-production.png
-  color_dark: "#121212"
-#  image_dark: assets/logo-production.png
-#  branding_dark: assets/branding-production.png
+ # flutter_native_splash-production.yaml
+# flutter_native_splash:
+#   color: "#ffffff"
+#   image: assets/images/quraan.png
+# #  branding: assets/branding-production.png
+#   color_dark: "#121212"
+# #  image_dark: assets/logo-production.png
+# #  branding_dark: assets/branding-production.png
 
-  android_12:
-    image: assets/images/quraan.png
-    icon_background_color: "#ffffff"
-#    image_dark: assets/logo-production.png
-#    icon_background_color_dark: "#121212"
+#   android_12:
+#     image: assets/images/quraan.png
+#     icon_background_color: "#ffffff"
+# #    image_dark: assets/logo-production.png
+# #    icon_background_color_dark: "#121212"

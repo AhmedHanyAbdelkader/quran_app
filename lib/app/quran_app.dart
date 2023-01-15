@@ -13,7 +13,7 @@ class QuranApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         onGenerateRoute: RouteGenerator.getRoute,
-        initialRoute: Routes.homeScreenRoute,
+        initialRoute: Routes.splashScreenRoute,
       ),
     );
   }

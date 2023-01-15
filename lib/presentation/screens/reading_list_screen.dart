@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
+// import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:quran/quran.dart' as quran;
 import 'package:quran_app/app/constant.dart';
 import 'package:quran_app/colors.dart';
@@ -108,7 +108,7 @@ class _ReadingListScreenState extends State<ReadingListScreen> {
   @override
   void initState() {
     super.initState();
-    FlutterNativeSplash.remove();
+    // FlutterNativeSplash.remove();
   }
 }
 
