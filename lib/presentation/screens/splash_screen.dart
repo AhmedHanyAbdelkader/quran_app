@@ -15,12 +15,13 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: EasySplashScreen(
+        logoWidth: 200,
         logo: Image.asset('assets/images/quraan.png'),
         navigator: HomeScreen(),
         loaderColor: Colors.red,
         loadingText: Text(
           'Loading......',
-          style: TextStyle(color: Colors.orange),
+          style: TextStyle(color: Colors.orange, fontSize: 25),
         ),
       ),
     );
