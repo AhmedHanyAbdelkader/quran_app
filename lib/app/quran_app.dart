@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quran_app/routes_manager.dart';
+import 'package:quran_app/core/global/resources/routes_manager.dart';
 
 class QuranApp extends StatelessWidget {
   const QuranApp({super.key});

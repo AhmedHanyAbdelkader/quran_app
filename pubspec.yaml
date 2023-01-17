@@ -40,6 +40,8 @@ dependencies:
   audio_session: ^0.1.13
   flutter_islamic_icons: ^1.0.2
   equatable: ^2.0.5
+  dartz: ^0.10.1
+  get_it: ^7.2.0
   flutter:
     sdk: flutter
 

@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:quran_app/data/data_source/remote_data_source.dart';
-import 'package:quran_app/presentation/controllers/bloc/quran_events.dart';
-import 'package:quran_app/presentation/controllers/bloc/quran_state.dart';
+import 'package:quran_app/reading_module/data/data_source/remote_data_source.dart';
+import 'package:quran_app/reading_module/presentation/controllers/bloc/quran_events.dart';
+import 'package:quran_app/reading_module/presentation/controllers/bloc/quran_state.dart';
 
 class QuranBloc extends Bloc<QuranEvent, QuranState> {
   QuranRemoteDataource quranRemoteDataource = QuranRemoteDataource();

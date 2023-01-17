@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 // import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:quran/quran.dart' as quran;
 import 'package:quran_app/app/constant.dart';
-import 'package:quran_app/colors.dart';
-import 'package:quran_app/presentation/screens/surah_screen.dart';
-import 'package:quran_app/routes_manager.dart';
+import 'package:quran_app/core/global/colors/app_light_colors.dart';
+import 'package:quran_app/core/global/resources/routes_manager.dart';
+import 'package:quran_app/core/utils/dummy.dart';
+import 'package:quran_app/reading_module/presentation/screens/surah_screen.dart';
 
 class ReadingListScreen extends StatefulWidget {
   const ReadingListScreen({Key? key}) : super(key: key);

@@ -1,31 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_islamic_icons/flutter_islamic_icons.dart';
-import 'package:quran_app/colors.dart';
-import 'package:quran_app/routes_manager.dart';
+import 'package:quran_app/core/global/colors/app_light_colors.dart';
+import 'package:quran_app/core/utils/dummy.dart';
 
 class HomeScreen extends StatelessWidget {
-  var myList = <Map<String, dynamic>>[
-    {
-      "icon": FlutterIslamicIcons.solidQuran2,
-      "text": "قراءه",
-      "routeName": Routes.readingListScreenRoute,
-    },
-    {
-      "icon": FlutterIslamicIcons.solidQuran,
-      "text": "استماع",
-      "routeName": Routes.readingListScreenRoute,
-    },
-    {
-      "icon": FlutterIslamicIcons.quran,
-      "text": "القبله",
-      "routeName": Routes.readingListScreenRoute,
-    },
-    {
-      "icon": FlutterIslamicIcons.quran,
-      "text": "اذكار",
-      "routeName": Routes.readingListScreenRoute,
-    },
-  ];
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(

@@ -1,4 +1,5 @@
-import 'package:quran_app/data/models/surah_model.dart';
+
+import 'package:quran_app/reading_module/data/models/surah_model.dart';
 
 enum RequestState {
   loading,

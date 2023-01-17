@@ -5,12 +5,12 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
-import 'package:quran_app/colors.dart';
-import 'package:quran_app/data/data_source/remote_data_source.dart';
-import 'package:quran_app/presentation/controllers/bloc/quran_bloc.dart';
-import 'package:quran_app/presentation/controllers/bloc/quran_events.dart';
-import 'package:quran_app/presentation/controllers/bloc/quran_state.dart';
 import 'package:quran/quran.dart' as quran;
+import 'package:quran_app/core/global/colors/app_light_colors.dart';
+import 'package:quran_app/reading_module/data/data_source/remote_data_source.dart';
+import 'package:quran_app/reading_module/presentation/controllers/bloc/quran_bloc.dart';
+import 'package:quran_app/reading_module/presentation/controllers/bloc/quran_events.dart';
+import 'package:quran_app/reading_module/presentation/controllers/bloc/quran_state.dart';
 
 class SurahScreen extends StatefulWidget {
   const SurahScreen({Key? key, required this.surahNumber}) : super(key: key);
